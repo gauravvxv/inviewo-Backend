@@ -6,13 +6,16 @@ const app = express()
 
 
 app.use(express.json())
-app.use(cors())
-
+app.use(cors({
+  origin: 'http://localhost:3000',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+}));
 app.get('/',(req,res) =>{
     res.json("Hello from backend")
 })
 
 app.use('/',route)
+app.use("/api/payment", route);
 
 pool.connect().then(client => {
     console.log('Connected to postgresql successfully')
