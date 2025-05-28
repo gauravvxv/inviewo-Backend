@@ -3,13 +3,15 @@ const pool = require('./config/db')
 const route = require('./routes/allRouter')
 const cors = require("cors")
 const app = express()
+const dotenv = require("dotenv")
+dotenv.config()
 
 app.use(express.json())
 
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
     ? process.env.FRONTEND_URL 
-    : 'http://localhost:3000',
+    :  undefined,
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
 }));
 
