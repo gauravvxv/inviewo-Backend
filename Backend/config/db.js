@@ -12,6 +12,9 @@ dotenv.config()
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false, // Supabase uses a valid cert, but this disables strict checking
+  },
 });
 
 
