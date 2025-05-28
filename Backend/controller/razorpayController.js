@@ -108,7 +108,7 @@ Payment ID: ${razorpay_payment_id}
 Thank you for booking with Inviewo!
 
 Regards,  
-Inviewo Team
+Nikita 
       `,
     };
 
