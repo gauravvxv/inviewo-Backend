@@ -24,7 +24,6 @@ const testConnection = async () => {
   try {
     const client = await pool.connect();
     console.log('Connected to postgresql successfully');
-    console.log('Database URL:', process.env.DATABASE_URL);
     client.release();
     return true;
   } catch (err) {
