@@ -7,7 +7,7 @@ dotenv.config()
 //     host: process.env.host,
 //     database: process.env.database,
 //     password: process.env.password,
-//     port: process.env.port
+//     port: process.env.port 
 // })
 
 const pool = new Pool({
