@@ -10,6 +10,4 @@ route.put('/api/booking/:id',updateBooking)
 route.post("/create-order", razorpayController.createOrder);
 route.post("/verify-payment", razorpayController.verifyPayment);
 
-
-
 module.exports = route
