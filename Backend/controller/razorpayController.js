@@ -15,7 +15,7 @@ exports.createOrder = async (req, res) => {
 
   try {
     const options = {
-      amount: amount,
+      amount: amount * 100,
       currency: "INR",
       receipt: `receipt_${Date.now()}`,
     };
