@@ -15,7 +15,8 @@ const postBooking = async (req, res) => {
 
     res.status(201).json({ message: "Booking data added", booking });
   } catch (error) {
-    res.status(401).json({ error });
+     console.error("Booking insertion error:", error);
+    res.status(500).json({ error });
   }
 };
 

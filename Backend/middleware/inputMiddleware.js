@@ -1,4 +1,3 @@
-// middleware/validateBookingFields.js
 module.exports = function inputMiddleware(req, res, next) {
   const { name, email, phone_number, domain, experience, bio, resume_link } = req.body;
 

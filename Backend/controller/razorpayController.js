@@ -82,7 +82,7 @@ Domain: ${booking.domain}
 Experience: ${booking.experience}
 Bio: ${booking.bio}
 Resume Link: ${booking.resume_link}
-Amount: ₹${amount /2}
+Amount: ₹${amount}
 Payment ID: ${razorpay_payment_id}
       `,
     };
@@ -94,7 +94,7 @@ Payment ID: ${razorpay_payment_id}
       text: `
 Hi ${booking.name},
 
-Your payment of ₹${amount /2} was successful.
+Your payment of ₹${amount} was successful.
 
 Here are your booking details:
 Domain: ${booking.domain}
