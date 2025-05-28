@@ -19,6 +19,7 @@ app.use("/api/payment", route);
 
 pool.connect().then(client => {
     console.log('Connected to postgresql successfully')
+    console.log(process.env.DATABASE_URL)
     client.release()
 
     app.listen(5000,()=>{
