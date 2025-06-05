@@ -9,7 +9,8 @@ dotenv.config()
 app.use(express.json())
 
 const allowedOrigins = [
-  'https://www.inviewo.com'
+  'https://www.inviewo.com',
+  'http://localhost:3000'
 ];
 
 app.use(cors({
