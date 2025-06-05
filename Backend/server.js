@@ -9,13 +9,11 @@ dotenv.config()
 app.use(express.json())
 
 const allowedOrigins = [
-  'https://www.inviewo.com',
-  'http://localhost:3000'
+  'https://www.inviewo.com'
 ];
 
 app.use(cors({
   origin: function (origin, callback) {
-    // allow requests with no origin like mobile apps or curl
     if (!origin) return callback(null, true);
     if (allowedOrigins.includes(origin)) {
       return callback(null, true);
